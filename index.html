@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="btn-open" data-modal-open>Open Window</button>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="btn-close" data-modal-close>&times;</button>
+            <h2>Форма заявки</h2>
+            <form>
+                <label>
+                    name:
+                    <input type="text" name="name" minlength="3" maxlength="12" required placeholder="enter your name">
+                </label>
+                <label>
+                    email:
+                    <input type="email" name="email" required placeholder="enter your email">
+                </label>
+                <label>
+                    phone number:
+                    <input type="tel" name="phone" pattern="^\+380\d{9}$" required placeholder="enter your phone number">
+                </label>
+                <label>
+                    message:
+                    <textarea name="message" rows="4" placeholder="your message"></textarea>
+                </label>
+                <button type="submit" class="btn-submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="modal.js"></script>
+</body>
+</html>
