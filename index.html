@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <button class="btn-open" data-modal-open>Open Window</button>
     <div class="backdrop is-hidden" data-modal>
@@ -16,6 +18,8 @@
                 <label>
                     name:
                     <input type="text" name="name" minlength="3" maxlength="12" required placeholder="enter your name">
+                    <input class="form-input" type="text" name="name" minlength="6" maxlength="10"
+                        placeholder="disabled">
                 </label>
                 <label>
                     email:
@@ -23,16 +27,22 @@
                 </label>
                 <label>
                     phone number:
-                    <input type="tel" name="phone" pattern="^\+380\d{9}$" required placeholder="enter your phone number">
+                    <input type="tel" name="phone" pattern="^\+380\d{9}$" required
+                        placeholder="enter your phone number">
                 </label>
                 <label>
-                    message:
-                    <textarea name="message" rows="4" placeholder="your message"></textarea>
+                    how old are you?
+                    <input class="how-old" type="number" name="amount" required min="18" max="50" />
                 </label>
+                <div>
+                    <input class="checkbox" type="checkbox" name="hobby" value="okay" id="okay" />
+                    <label class="okay" for="okay">Okay</label>
+                </div>                
                 <button type="submit" class="btn-submit">Send</button>
             </form>
         </div>
     </div>
     <script src="modal.js"></script>
 </body>
+
 </html>
